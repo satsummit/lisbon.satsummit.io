@@ -7,11 +7,9 @@ import {
   ListItem,
   Text,
   ListIcon,
-  List,
-  Tooltip
+  List
 } from '@chakra-ui/react';
 import {
-  CollecticonArrowRight,
   CollecticonBrandLinkedin,
   CollecticonBrandSatsummit,
   CollecticonEnvelope,
@@ -23,8 +21,6 @@ import SmartLink from './smart-link';
 import Brand from './brand';
 import MenuLink from './menu-link';
 import { CollecticonBrandX } from './icons/brand-x';
-
-import { visuallyDisableProps } from '$utils/utils';
 
 function FooterBlock(props: FlexProps) {
   return <Flex flexFlow='column' gap='4' {...props} />;

@@ -15,8 +15,8 @@ export default function HomeHero() {
       position='relative'
       bg='primary.500'
       minHeight={{ base: '20rem', md: '36rem' }}
-      paddingX={{ base: '12', md: '16' }}
-      paddingY={{ base: '12', md: '16' }}
+      paddingX={{ base: '8', md: '16' }}
+      paddingY={{ base: '8', md: '16' }}
       display='flex'
       flexFlow='column'
       justifyContent='center'
@@ -38,55 +38,60 @@ export default function HomeHero() {
           display='inline-flex'
           flexFlow='column'
           color='base.500'
-          sx={{
-            '> *': {
-              lineHeight: { base: '0.875', md: '1' }
-            }
-          }}
         >
           <Text
             as='span'
-            alignSelf={{
-              md: 'end'
-            }}
-            fontSize={{ base: '2rem', sm: '2rem', md: '4rem' }}
-          >
-            This is
-          </Text>
-          <Text
-            as='span'
             fontSize={{ base: '4rem', md: '8rem' }}
-            mt={{ md: '-4' }}
+            lineHeight='1'
           >
             Satsummit
           </Text>
-          <Text
+          <Box
             as='span'
-            fontSize={{ base: '4rem', md: '8rem' }}
-            alignSelf='start'
-            mt={{ md: '-4' }}
-            position='relative'
-            zIndex='1'
-            _before={{
-              content: '""',
-              backgroundColor: 'secondary.500',
-              position: 'absolute',
-              width: '100%',
-              height: '0.5em',
-              bottom: '0.05em',
-              zIndex: '-1'
-            }}
+            display='flex'
+            alignItems='start'
+            justifyContent='end'
+            gap={{ base: '2', md: '4' }}
+            pr={{ base: '2', md: '4' }}
+            mt={{ base: '-2', md: '-4' }}
           >
-            2024
-          </Text>
+            <Text
+              as='span'
+              textAlign='right'
+              fontSize={{ base: '1.75rem', md: '3.5rem' }}
+              lineHeight='0.5'
+              mt={{ base: '1', md: '3' }}
+            >
+              goes
+              <br /> to
+            </Text>
+            <Text
+              as='span'
+              fontSize={{ base: '4rem', md: '8rem' }}
+              lineHeight='1'
+              position='relative'
+              zIndex='1'
+              _before={{
+                content: '""',
+                backgroundColor: 'secondary.500',
+                position: 'absolute',
+                width: '100%',
+                height: '0.5em',
+                bottom: '0.05em',
+                zIndex: '-1'
+              }}
+            >
+              Lisbon
+            </Text>
+          </Box>
         </Heading>
         <Box
           bg='base.500'
           color='white'
           position='absolute'
-          bottom={{ base: '-5rem', md: '-5rem', lg: '3.5rem' }}
-          left={{ base: '8rem', md: '15.5rem', lg: '0' }}
-          transform={{ lg: 'translateX(calc(-100% - 1rem))' }}
+          bottom={{ base: '-6rem', md: '-7.5rem', lg: '-5.5rem' }}
+          left={{ base: '1.25rem', md: '16rem', lg: '6.5rem' }}
+          transform={{ md: 'translateX(calc(-100% - 1rem))' }}
           alignSelf={{ base: 'start', md: 'center' }}
           p='4'
           _after={{
@@ -95,14 +100,10 @@ export default function HomeHero() {
             width: '1.5rem',
             height: '1rem',
             background: 'base.500',
-            top: { lg: '100%' },
             left: { base: '0', lg: 'auto' },
             right: { lg: '0' },
-            bottom: { base: '100%', lg: 'auto' },
-            clipPath: {
-              base: 'polygon(0 0, 0% 100%, 100% 100%)',
-              lg: 'polygon(0 0, 100% 0, 100% 100%)'
-            }
+            bottom: '100%',
+            clipPath: 'polygon(100% 0, 0% 100%, 100% 100%)'
           }}
         >
           <Heading
@@ -114,7 +115,7 @@ export default function HomeHero() {
           >
             November
             <br />
-            Lisbon, Portugal
+            18 & 19, 2024
           </Heading>
         </Box>
       </Flex>

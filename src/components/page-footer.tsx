@@ -47,57 +47,14 @@ export default function PageFooter() {
             lg: '1/ span 3'
           }}
         >
-          <Heading size='md'>This edition</Heading>
-          <List>
-            {/* <ListItem>
-              <MenuLink to='/agenda'>
-                <ListIcon as={CollecticonArrowRight} /> Agenda
-              </MenuLink>
-            </ListItem>
-            <ListItem>
-              <MenuLink to='/fringe'>
-                <ListIcon as={CollecticonArrowRight} /> Fringe Events
-              </MenuLink>
-            </ListItem>
-            <ListItem>
-              <MenuLink to='/speakers'>
-                <ListIcon as={CollecticonArrowRight} /> Speakers
-              </MenuLink>
-            </ListItem>
-            <ListItem>
-              <MenuLink to='/tickets'>
-                <ListIcon as={CollecticonArrowRight} /> Tickets
-              </MenuLink>
-            </ListItem> */}
-            <ListItem>
-              <Tooltip label='Coming soon' placement='right' hasArrow>
-                <MenuLink to='/practical-info' {...visuallyDisableProps()}>
-                  <ListIcon as={CollecticonArrowRight} /> Practical info
-                </MenuLink>
-              </Tooltip>
-            </ListItem>
-            {/* <ListItem>
-              <MenuLink to='/code-of-conduct'>
-                <ListIcon as={CollecticonArrowRight} /> Code of conduct
-              </MenuLink>
-            </ListItem>
-            <ListItem>
-              <MenuLink to='/terms-conditions'>
-                <ListIcon as={CollecticonArrowRight} /> Terms & conditions
-              </MenuLink>
-            </ListItem> */}
-          </List>
-        </FooterBlock>
-        <FooterBlock
-          gridColumn={{
-            base: '1/-1',
-            sm: '3 / span 2',
-            md: '5/ span 4',
-            lg: '4/ span 3'
-          }}
-        >
-          <Heading size='md'>Past Editions</Heading>
+          <Heading size='md'>Editions</Heading>
           <List as='ol'>
+            <ListItem>
+              <MenuLink to='https://2024.satsummit.io'>
+                <ListIcon as={CollecticonExpandTopRight} />
+                Satsummit 2024
+              </MenuLink>
+            </ListItem>
             <ListItem>
               <MenuLink to='https://2022.satsummit.io'>
                 <ListIcon as={CollecticonExpandTopRight} />
@@ -127,9 +84,9 @@ export default function PageFooter() {
         <FooterBlock
           gridColumn={{
             base: '1/-1',
-            sm: '1 / span 2',
-            md: '1/ span 4',
-            lg: '7/ span 3'
+            sm: '3 / span 2',
+            md: '5/ span 4',
+            lg: '4/ span 3'
           }}
         >
           <Heading size='md'>Let&apos;s Connect</Heading>
@@ -169,8 +126,8 @@ export default function PageFooter() {
         <FooterBlock
           gridColumn={{
             base: '1/-1',
-            sm: '3 / span 2',
-            md: '5/ span 4',
+            sm: '1 / span 2',
+            md: '1/ span 4',
             lg: '10/ span 3'
           }}
         >

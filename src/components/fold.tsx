@@ -22,7 +22,7 @@ export function Fold(props: SimpleGridProps) {
 }
 
 export function FoldProse(props: FlexProps) {
-  return <Flex flexFlow='column' gap='4' p={['4', '8']} {...props} />;
+  return <Flex flexFlow='column' gap='4' {...props} />;
 }
 
 export function FoldMedia(props: BoxProps) {

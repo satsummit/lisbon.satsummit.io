@@ -1,6 +1,6 @@
 import * as React from 'react';
 import type { HeadFC } from 'gatsby';
-import { Button, Flex, Text, Heading } from '@chakra-ui/react';
+import { Button, Flex, Text, Heading, Divider } from '@chakra-ui/react';
 import { CollecticonArrowUpRight } from '@devseed-ui/collecticons-chakra';
 
 import PageLayout from '$components/page-layout';
@@ -16,17 +16,17 @@ export default function IndexPage() {
       <Flex
         flexFlow='column'
         gap='8'
-        py='12'
-        px='4'
+        py={{ base: '8', md: '12', lg: '20' }}
+        px={{ base: '4', md: '8', lg: '12' }}
         position='relative'
         zIndex='30'
-        mt={{ base: '0', lg: '-40' }}
+        mt={{ base: '0', md: '-16', lg: '-32' }}
       >
         <Fold alignItems='end'>
           <ChakraFade
             direction='up'
             triggerOnce
-            gridColumn={{ base: '1/-1', lg: '2/ span 5' }}
+            gridColumn={{ base: '1/-1', md: '1/ span 4', lg: '2/ span 5' }}
           >
             <FoldProse
               display='flex'
@@ -47,7 +47,16 @@ export default function IndexPage() {
           <ChakraFade
             direction='up'
             triggerOnce
-            gridColumn={{ base: '1/-1', lg: '7/ span 5' }}
+            gridColumn='1/-1'
+            display={{ md: 'none' }}
+          >
+            <Divider borderColor='base.200a' size='md' />
+          </ChakraFade>
+
+          <ChakraFade
+            direction='up'
+            triggerOnce
+            gridColumn={{ base: '1/-1', md: '5/ span 4', lg: '7/ span 5' }}
           >
             <FoldProse
               display='flex'

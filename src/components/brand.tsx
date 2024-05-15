@@ -14,8 +14,7 @@ export default function Brand(props: BrandProps) {
     query {
       site {
         siteMetadata {
-          title
-          edition
+          shortTitle
         }
       }
     }
@@ -48,24 +47,7 @@ export default function Brand(props: BrandProps) {
           alignItems='center'
           gap='1'
         >
-          <Text as='span'>{data.site.siteMetadata.title}</Text>{' '}
-          <Text
-            as='span'
-            position='relative'
-            zIndex='1'
-            _before={{
-              content: '""',
-              backgroundColor:
-                variation === 'positive' ? 'base.200a' : 'base.400a',
-              position: 'absolute',
-              width: '100%',
-              height: '0.5em',
-              bottom: '0.25em',
-              zIndex: '-1'
-            }}
-          >
-            {data.site.siteMetadata.edition}
-          </Text>
+          <Text as='span'>{data.site.siteMetadata.shortTitle}</Text>
         </Text>
       </ChLink>
     </Heading>

@@ -75,13 +75,13 @@ export default function IndexPage() {
               </Text>
               <Button
                 as='a'
-                href='https://23425005.hs-sites.com/satsummit-2024'
+                href='http://23425005.hs-sites.com/en-us/lisbon-satsummit-2024'
                 colorScheme='primary'
                 alignSelf='start'
                 rightIcon={<CollecticonArrowUpRight />}
                 size={{ base: 'md', lg: 'lg' }}
               >
-                Get the newsletter
+                Be notified
               </Button>
             </FoldProse>
           </ChakraFade>

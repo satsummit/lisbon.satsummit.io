@@ -59,11 +59,11 @@ export default function HomeHero() {
               as='span'
               textAlign='right'
               fontSize={{ base: '1.75rem', md: '3.5rem' }}
-              lineHeight='0.5'
-              mt={{ base: '1', md: '3' }}
+              lineHeight='0.875'
+              mt={{ base: '2', md: '4' }}
             >
               goes
-              <br /> to
+              <br style={{ lineHeight: '0.875' }} /> to
             </Text>
             <Text
               as='span'

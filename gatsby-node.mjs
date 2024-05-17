@@ -1,10 +1,10 @@
 import path from 'path';
-import { add } from 'date-fns';
+// import { add } from 'date-fns';
 import { generateEventsMDXIndex } from './plugins/events-mdx-index.mjs';
 
 const letterTemplate = path.resolve('./src/templates/letter-page.tsx');
 const peopleTemplate = path.resolve('./src/templates/people-page.tsx');
-const agendaHubTemplate = path.resolve('./src/templates/agenda-hub.tsx');
+// const agendaHubTemplate = path.resolve('./src/templates/agenda-hub.tsx');
 
 const capitalize = (v) => `${v[0].toUpperCase()}${v.slice(1)}`;
 
@@ -109,19 +109,19 @@ export const createPages = async ({ actions, graphql }) => {
   });
 
   // Agenda pages for the different days.
-  const evenDates = data.site.siteMetadata.eventDates.map(
-    (date) => new Date(date)
-  );
-  evenDates.forEach((date, i) => {
-    actions.createPage({
-      path: i ? `/agenda/${i + 1}` : `/agenda`,
-      component: agendaHubTemplate,
-      context: {
-        start: date.toISOString().slice(0, 10),
-        end: add(date, { days: 1 }).toISOString().slice(0, 10)
-      }
-    });
-  });
+  // const evenDates = data.site.siteMetadata.eventDates.map(
+  //   (date) => new Date(date)
+  // );
+  // evenDates.forEach((date, i) => {
+  //   actions.createPage({
+  //     path: i ? `/agenda/${i + 1}` : `/agenda`,
+  //     component: agendaHubTemplate,
+  //     context: {
+  //       start: date.toISOString().slice(0, 10),
+  //       end: add(date, { days: 1 }).toISOString().slice(0, 10)
+  //     }
+  //   });
+  // });
 };
 
 export const createSchemaCustomization = ({ actions, schema }) => {
